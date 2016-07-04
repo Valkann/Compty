@@ -43,7 +43,7 @@ class type_conso {
 	}
 
 	/*
-	function getUnite($bdd, $id) {
+	function getUniteName($bdd, $id) {
 				
 				$myinsecuredata=$id;
 				$sql = 'SELECT * FROM type_consommation WHERE id_type_consommation = '. $myinsecuredata;
@@ -71,13 +71,15 @@ class type_conso {
 				$reponse->closeCursor();
 	}
 
-	function setTypeConso($bdd, $id, $unite) {
+	function setTypeConso($bdd, $nom, $unite) {
 			
+			$newUnite = new unite;
+			$newUnite->getUnite($bdd, $unite);
 			$insert ='INSERT INTO type_consommation (libelle_type_consommation,id_unite) VALUES (:libelle_type_consommation, :id_unite)';
 			$req = $bdd->prepare($insert);
 			$req->execute(array(
 			    'libelle_type_consommation' => $nom,
-			    'id_unite' => $unite->getId()
+			    'id_unite' => $newUnite->getId()
 	    	));
 	    	$req->closeCursor();
 	}

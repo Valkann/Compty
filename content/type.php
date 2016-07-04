@@ -5,7 +5,7 @@
 		//$count = delUnite($_POST['id_unite']);
 		$type_conso = new type_conso;
 		$type_conso->delTypeConso($bdd,$id);
-		header('Location: index.php?action=afficherUnite');  
+		header('Location: index.php?action=afficherTypeConso');  
 	}
 
 	$type_conso = new type_conso; 
@@ -50,7 +50,13 @@ while ($donnees = $reponse->fetch())
 ?>
 	<tr>
 		<td><?php echo $donnees['libelle_type_consommation']; ?></td>
-		<td><?php echo $donnees['id_unite']; ?></td>		
+		<td>
+		<?php 
+				$unite = new unite ;
+				$unite->getUnite($bdd, $donnees['id_unite']);
+				echo $unite->getNom();
+		?>	
+		</td>		
 		<td>
 			<a href="index.php?action=modifierTypeConso&modifier=<?php echo $donnees['id_type_consommation ']; ?>"> Modifier</a>
 		</td>

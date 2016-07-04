@@ -56,11 +56,21 @@ qui nous donne l'emplacement du template
                     "content/unite.php"
                     ];    
                     break;
+                case 'modifierUnite' :
+                    $this->content = [
+                    "content/add_unite.php"
+                    ];    
+                    break;    
                 case 'afficherTypeConso' :
                     $this->content = [
                     "content/type.php"
                     ];    
-                    break;            
+                    break;
+                case 'modifierTypeConso' :
+                    $this->content = [
+                    "content/add_type.php"
+                    ];    
+                    break;                
 
                 //Par défaut, on affiche la page d'accueil  
                 default :   
