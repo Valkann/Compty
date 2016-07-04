@@ -104,7 +104,7 @@
 						<th>Unité</th>
 					</tr>
 					<tr>
-						<td><input type="text" name="nom" /></td>
+						<td><input type="text" name="nom" required placeholder="Entrez un type de conso"/></td>
 						<td>
 						<select name="unite"> 
 						<?php

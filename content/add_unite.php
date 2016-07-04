@@ -69,8 +69,8 @@
 							<th>Symbole de l'unité</th>
 						</tr>
 						<tr>
-							<td><input type="text" name="nom" value="<?php echo $unite->getNom();?>"/></td>
-							<td><input type="text" name="symbole" value="<?php echo $unite->getSymbole();?>"/></td>
+							<td><input type="text" name="nom" value="<?php echo $unite->getNom();?>" required/></td>
+							<td><input type="text" name="symbole" value="<?php echo $unite->getSymbole();?>" required/></td>
 						</tr>
 						<tr>
 							<td colspan=2>
@@ -98,8 +98,8 @@
 						<th>Symbole de l'unité</th>
 					</tr>
 					<tr>
-						<td><input type="text" name="nom" /></td>
-						<td><input type="text" name="symbole" /></td>
+						<td><input type="text" name="nom" required placeholder="Entrez un nom"/></td>
+						<td><input type="text" name="symbole" required placeholder="Entrez un symbole" /></td>
 					</tr>
 					<tr>
 						<td colspan=2>
